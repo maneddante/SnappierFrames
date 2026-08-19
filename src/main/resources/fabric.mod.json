@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "snappierframes",
+  "version": "${version}",
+  "name": "SnappierFrames",
+  "description": "Modifies the rendering of item frames so that they properly connect to their supporting block",
+  "authors": [
+    {
+      "name": "ManedDante",
+      "contact": {
+        "discord": "https://discord.com/users/1077375956165075025"
+      }
+    }
+  ],
+  "contact": {
+    "homepage": "https://modrinth.com/project/snappierframes",
+    "sources": "https://github.com/maneddante/SnappierFrames",
+    "issues": "https://github.com/maneddante/SnappierFrames/issues"
+  },
+  "license": "All-Rights-Reserved",
+  "icon": "assets/snappierframes/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "dog.dante.snappierframes.client.SnappierframesClient"
+    ],
+    "main": [
+      "dog.dante.snappierframes.Snappierframes"
+    ]
+  },
+  "mixins": [
+    "snappierframes.mixins.json",
+    {
+      "config": "snappierframes.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "minecraft": "~${minecraft_version}"
+  }
+}
